@@ -10,7 +10,7 @@ class EmailParser
   end
 
   def parse
-    emails.split.collect do |email|
+    email_list = emails.collect do |email|
     email.split(",")
     end
     .uniq.flatten
