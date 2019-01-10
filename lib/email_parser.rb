@@ -10,10 +10,9 @@ class EmailParser
   end
 
   def parse
-    list = []
-    emails.split.each do |email|
-    list << email.split(",")
+    emails.split.collect do |email|
+    email.split(",")
     end
-    list.uniq.flatten
+    .uniq.flatten
   end
 end
